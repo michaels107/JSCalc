@@ -1,0 +1,38 @@
+/*
+Created 6/30/2020 by Duytan Tran
+CSS code styling for calculator.html
+*/
+
+/*Created 6/30/2020 by Duytan Tran
+  Styling for entire calculator
+*/
+.calculator {
+    width: 375px;
+}
+
+/*Created 6/30/2020 by Duytan Tran
+  Styling for displays*/
+.display, .prepared_display {
+    text-align: right;
+    font-size: xx-large;
+    border: black solid thin;
+    margin-bottom: 5px;
+}
+
+/*Created 6/30/2020 by Duytan Tran
+  Styling for prepared displas*/
+.prepared_display {
+    font-size: large;
+    height: 20px;
+}
+
+/*Created 6/30/2020 by Duytan Tran
+  Styling for buttons*/
+.buttons {
+    display: grid;
+    font-size: x-large;
+    height: 200px;
+    width: 375px;
+    grid-gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+}
