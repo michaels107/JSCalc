@@ -2,10 +2,10 @@
 ### JavaScript Calculator
 
 ### Roles
-* Overall Project Manager:
-* Coding Manager:
-* Testing Manager:
-* Documentation:
+* Overall Project Manager: Reema Gupta
+* Coding Manager: Sean Michaels 
+* Testing Manager: Caroline Wheeler 
+* Documentation: Duytan Tran
 
 ### Contributions
 Please list who did what for each part of the project.
