@@ -65,7 +65,7 @@ buttons.addEventListener('click', e => {
                 }
                 else if (op =="/"){ // checks the flag for which op it is
                     sec_num = display.textContent;
-                    result = parseInt(first_num) / parseInt(sec_num);
+                    result = parseFloat(first_num) / parseFloat(sec_num);
                     first_num = "";
                     sec_num = "";
                     prepared_display.textContent = "";
