@@ -2,6 +2,7 @@
 * Edited 6/30/2020 by Sean Michaels: Added the solve button and added a multiply button to work.
 * Edited 7/1/2020 by Reema Gupta:  added a divide button to work.
 * Edited 7/1/2020 by Duytan Tran
+* Edited 7/1/2020 by Caroline Wheeler: Implementation of addition button.
 * Javascript code for calculator action listening events.*/
 
 /*Created 6/30/2020 by Duytan Tran
@@ -25,6 +26,7 @@ function clear_input(display, prepared_display){
   Edited 6/30/2020 by Sean Michaels: Added the solve button and added a multiply button to work.
   Edited 7/1/2020 by Reema Gupta: Added divide button
   Edited 7/1/2020 by Duytan Tran: Added subtract button, factored out common code in solve
+  Edited 7/1/2020 by Caroline Wheeler: Added addition button
   Main*/
 const calculator = document.querySelector('.calculator');
 const prepared_display = document.querySelector('.prepared_display');
@@ -51,7 +53,13 @@ buttons.addEventListener('click', e => {
                 display.textContent = "0";
                 op = "/";
                 break;
-            case 'subtract':
+            case 'add' :
+                first_num = display.textContent;
+                prepared_display.textContent = display.textContent + "+";
+                display.textContent = "0";
+                op = "+";
+                break;
+            case 'subtract' :
                 first_num = display.textContent;
                 prepared_display.textContent = display.textContent + " -";
                 display.textContent = "0";
@@ -67,6 +75,9 @@ buttons.addEventListener('click', e => {
                 }
                 else if (op == "/"){
                     result = parseFloat(first_num) / parseFloat(sec_num);
+                }
+                else if (op == "+"){
+                    result = parseFloat(first_num) + parseFloat(sec_num);
                 }
                 else if (op == "-"){
                     result = parseFloat(first_num) - parseFloat(sec_num);
