@@ -1,6 +1,7 @@
 /*Created 6/30/2020 by Duytan Tran
-* Edited 6/30/2020 by Sean Michaels : Added the solve button and added a multiply button to work.
-* Edited 7/1/2020 by Reema Gupta :  added a divide button to work.
+* Edited 6/30/2020 by Sean Michaels: Added the solve button and added a multiply button to work.
+* Edited 7/1/2020 by Reema Gupta:  added a divide button to work.
+* Edited 7/1/2020 by Duytan Tran
 * Javascript code for calculator action listening events.*/
 
 /*Created 6/30/2020 by Duytan Tran
@@ -21,6 +22,9 @@ function clear_input(display, prepared_display){
 }
 
 /*Created 6/30/2020 by Duytan Tran
+  Edited 6/30/2020 by Sean Michaels: Added the solve button and added a multiply button to work.
+  Edited 7/1/2020 by Reema Gupta: Added divide button
+  Edited 7/1/2020 by Duytan Tran: Added subtract button, factored out common code in solve
   Main*/
 const calculator = document.querySelector('.calculator');
 const prepared_display = document.querySelector('.prepared_display');
@@ -34,7 +38,7 @@ buttons.addEventListener('click', e => {
     if(e.target.matches('button')){
         const button = e.target;
         const action = button.dataset.action;
-        switch(action){
+        switch(action){ //Responding accordingly to calculator button press
             case 'multiply' :
                 first_num = display.textContent;
                 prepared_display.textContent = display.textContent + " *";
@@ -48,29 +52,29 @@ buttons.addEventListener('click', e => {
                 op = "/";
                 break;
             case 'subtract':
-                //stub
+                first_num = display.textContent;
+                prepared_display.textContent = display.textContent + " -";
+                display.textContent = "0";
+                op = "-";
                 break;
             case 'clear':
                 clear_input(display, prepared_display);
                 break;
-
             case 'solve':
+                sec_num = display.textContent;
                 if(op == "*"){ // checks the flag for which op it is
-                        sec_num = display.textContent;
-                        result = parseInt(first_num) * parseInt(sec_num);
-                        first_num = "";
-                        sec_num = "";
-                        prepared_display.textContent = "";
-                        display.textContent = result.toString();
+                    result = parseInt(first_num) * parseInt(sec_num);
                 }
-                else if (op =="/"){ // checks the flag for which op it is
-                    sec_num = display.textContent;
+                else if (op == "/"){
                     result = parseFloat(first_num) / parseFloat(sec_num);
-                    first_num = "";
-                    sec_num = "";
-                    prepared_display.textContent = "";
-                    display.textContent = result.toString();
                 }
+                else if (op == "-"){
+                    result = parseFloat(first_num) - parseFloat(sec_num);
+                }
+                first_num = "";
+                sec_num = "";
+                prepared_display.textContent = "";
+                display.textContent = result.toString();
                 break;
             default:
                 digit_input(button, display, calculator);
