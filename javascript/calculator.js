@@ -1,5 +1,6 @@
 /*Created 6/30/2020 by Duytan Tran
 * Edited 6/30/2020 by Sean Michaels : Added the solve button and added a multiply button to work.
+* Edited 7/1/2020 by Reema Gupta :  added a divide button to work.
 * Javascript code for calculator action listening events.*/
 
 /*Created 6/30/2020 by Duytan Tran
@@ -40,12 +41,19 @@ buttons.addEventListener('click', e => {
                 display.textContent = "0";
                 op = "*"; // 1 being a flag for multi
                 break;
+            case 'divide' :
+                first_num = display.textContent;
+                prepared_display.textContent = display.textContent + " /";
+                display.textContent = "0";
+                op = "/";
+                break;
             case 'subtract':
                 //stub
                 break;
             case 'clear':
                 clear_input(display, prepared_display);
                 break;
+
             case 'solve':
                 if(op == "*"){ // checks the flag for which op it is
                         sec_num = display.textContent;
@@ -54,6 +62,14 @@ buttons.addEventListener('click', e => {
                         sec_num = "";
                         prepared_display.textContent = "";
                         display.textContent = result.toString();
+                }
+                else if (op =="/"){ // checks the flag for which op it is
+                    sec_num = display.textContent;
+                    result = parseInt(first_num) / parseInt(sec_num);
+                    first_num = "";
+                    sec_num = "";
+                    prepared_display.textContent = "";
+                    display.textContent = result.toString();
                 }
                 break;
             default:
