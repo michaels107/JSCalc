@@ -1,33 +1,57 @@
 /*
 Created 6/30/2020 by Duytan Tran
+Edited 7/1/2020 by Caroline Wheeler: Updated styling
 CSS code styling for calculator.html
 */
 
-/*Created 6/30/2020 by Duytan Tran
+/*
+ Created 7/1/2020 by Caroline Wheeler
+ Styling for the web page
+ */
+body{
+    margin: 70px 100px;
+    font-family: Arial, sans-serif;
+    background: aliceblue;
+}
+
+/*
+  Created 6/30/2020 by Duytan Tran
+  Edited 7/1/2020 by Caroline Wheeler: Added background color & padding
   Styling for entire calculator
 */
 .calculator {
     width: 375px;
+    background: lightslategray;
+    padding: 10px;
 }
 
-/*Created 6/30/2020 by Duytan Tran
-  Styling for displays*/
+/*
+  Created 6/30/2020 by Duytan Tran
+  Edited 7/1/2020 by Caroline Wheeler: Added padding & background color
+  Styling for displays
+*/
 .display, .prepared_display {
     text-align: right;
     font-size: xx-large;
     border: black solid thin;
+    padding: 5px;
+    background: white;
     margin-bottom: 5px;
 }
 
-/*Created 6/30/2020 by Duytan Tran
-  Styling for prepared displays*/
+/*
+  Created 6/30/2020 by Duytan Tran
+  Styling for prepared displays
+*/
 .prepared_display {
     font-size: large;
     height: 20px;
 }
 
-/*Created 6/30/2020 by Duytan Tran
-  Styling for buttons*/
+/*
+  Created 6/30/2020 by Duytan Tran
+  Styling for buttons
+*/
 .buttons {
     display: grid;
     font-size: x-large;
