@@ -4,6 +4,7 @@ Edited 6/30/2020 by Sean Michaels : Added multiplication button
 Edited 7/1/2020 by Reema Gupta : Added division button
 Edited 7/1/2020 by Reema Gupta : Added decimal button
 Edited 7/1/2020 by Caroline Wheeler: Added addition button
+Edited 7/3/2020 by Duytan Tran: Restructured for javascript button generation
 Central HTML code for calculator web-page.
 -->
 <!DOCTYPE html>
@@ -18,25 +19,14 @@ Central HTML code for calculator web-page.
     <div class="prepared_display"></div>
     <div class="display">0</div>
     <div class="buttons">
-        <button data-action="add" class="op">+</button>
-        <button data-action="subtract" class="op">-</button>
-        <button data-action="multiply" class="op">*</button>
-        <button data-action="divide" class="op">/</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>0</button>
-        <button data-action="clear">c</button>
-        <button>.</button>
-        <button data-action="solve">=</button>
+        <div name="memory"></div>
+        <div name="ops"></div>
+        <div name="digits"></div>
+        <div name="basic"></div>
     </div>
 </div>
-<script src="javascript/calculator.js"></script>
+<script src="javascript/button_generation.js"></script>
+<script src="javascript/digits.js"></script>
+<script src="javascript/basic.js"></script>
 </body>
 </html>
