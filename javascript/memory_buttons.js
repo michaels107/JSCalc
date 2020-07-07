@@ -2,14 +2,19 @@
 * Generation of the memory_buttons buttons.*/
 
 /* Creating memory_buttons object to store the array of multiple memory_buttons stored. */
-let memory_buttons = [];
 let last_val = 0;
+let button_count = 0;
 
 /* Memory Set button generation */
 developButton("memory", 'MS', "mem_set", e => {
     const display = document.getElementsByClassName("display")[0];
-    memory_buttons.unshift(display.innerHTML);
     last_val = display.innerHTML;
+
+    /* Memory button generation in display */
+    developButton("mem_display", last_val, "mem_list", e => {
+        display.innerHTML = last_val;
+    });
+    button_count++;
 });
 
 /* Memory Recall button generation */
@@ -45,7 +50,8 @@ developButton("memory", 'M/', "mem_div", e => {
 
 /* Memory clear button generation */
 developButton("memory", 'MC', "mem_clear", e => {
-    const display = document.getElementsByClassName("display")[0];
-    memory_buttons = [];
-    last_val = 0;
+    let elements = document.getElementsByName("mem_list");
+    while(elements.length > 0) {
+        deleteButton(elements[elements.length-1])
+    }
 });

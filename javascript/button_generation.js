@@ -17,3 +17,12 @@ function developButton(parentName, content, name, listenerFunction){
     button.addEventListener("click", listenerFunction);
     parent.appendChild(button);
 }
+
+/*
+ * Created 7/7/2020 by Sean Michaels
+ * Function to delete elements.
+ */
+function deleteButton(element){
+    element.parentElement.removeChild(element);
+}
+

@@ -1,13 +1,14 @@
 /*
 Created 6/30/2020 by Duytan Tran
 Edited 7/1/2020 by Caroline Wheeler: Updated styling
-Edited 7/7/2020 by Sean Michaels: Created a container so that memory display will be up and some CSS for that display
+Edited 7/7/2020 by Sean Michaels: Created a container so that memory display will be up and some CSS for that display.
+                                    Fixed some CSS for the calculator and the memory display.
 CSS code styling for calculator.html
 */
 
 /*
     Created 7/7/2020 by Sean Michaels
-    Styling for the Memory display.
+    Container div that allows for the memory and calculator displays and next to each other.
  */
 .container{
     display: flex;
@@ -34,6 +35,7 @@ body{
     width: 375px;
     background: lightslategray;
     padding: 10px;
+    max-height: 275px;
 }
 
 /*
@@ -77,14 +79,31 @@ body{
     Styling for the Memory display.
  */
 .memory_display {
-    display: table-column-group;
-    height: 350px;
+    background: lightslategray;
+    display: table-column;
     width: 350px;
     text-align: center;
     font-size: xx-large;
     border: black solid thin;
     padding: 5px;
-    background: #ffffff;
     margin-bottom: 5px;
 
+}
+/*
+    Created 7/7/2020 by Sean Michaels
+    Styling for the Memory display.
+ */
+.memory_display button {
+    border: 1px solid black;
+    width: 350px;
+    display: block;
+}
+
+/*
+    Created 7/7/2020 by Sean Michaels
+    Styling for the Memory display.
+    Background of button when mouse is hovering.
+*/
+.btn-group button:hover {
+    background-color: #3e8e41;
 }
