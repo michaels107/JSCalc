@@ -38,6 +38,7 @@ let op = "";
 let result = "";
 let first_num = "";
 let sec_num = "";
+let mem = "";
 buttons.addEventListener('click', e => {
     if(e.target.matches('button')){
         const button = e.target;
@@ -69,6 +70,9 @@ buttons.addEventListener('click', e => {
                 break;
             case 'clear':
                 clear_input(display, prepared_display);
+                break;
+            case 'memoryS':
+                mem = parseFloat(display.textContent);
                 break;
             case 'solve':
                 sec_num = display.textContent;
