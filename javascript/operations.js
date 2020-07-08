@@ -35,6 +35,12 @@ These are in the correct order of operations.
 const operations = [
     // Reema - create trig operations here
     // any other additional operations just need to be in the correct order
+
+    //handles parens
+    {findMatches: (str) =>
+            Array.from(new Set(str.match(new RegExp("\\([^\\(\\)]+\\)", "g")))),
+        evaluate: (match) => evaluateMath(match.replace("(", "").replace(")", "")),
+    },
     CreateSimpleOperation("*", ([a, b]) => a * b),
     CreateSimpleOperation("/", ([a, b]) => a / b),
     CreateSimpleOperation("+", ([a, b]) => a + b),
@@ -43,11 +49,11 @@ const operations = [
 
 /*
 Created 7/8/2020 by Caroline Wheeler
-Takes a string (ex. "2 * 4 -1") and returns true if it contains no math expression to evaluate.
+Takes a mathString and returns true if it contains no math expression to evaluate.
  */
-const noMatches = (str) => {
-    return operations.every(({ findMatches }) => findMatches(str).length === 0)
-}
+const noMatches = (str) =>
+    operations.every(({ findMatches }) => findMatches(str).length === 0);
+
 
 /*
 Created 7/8/2020 by Caroline Wheeler
@@ -58,11 +64,10 @@ operation having been replaced with their evaluated result.
 const evaluateOperation = (str, operation) =>
     operation.findMatches(str).reduce((a, match) => a.replace(match, operation.evaluate(match)), str );
 
-
 /*
 Created 7/7/2020 by Caroline Wheeler
 Edited 7/8/2020 by Caroline Wheeler - split up into multiple functions.
-Takes a string (ex. "2 + 4 * 6") and returns an evaluation.
+Takes a mathString and returns an evaluation.
  */
 const evaluateMath = (mathString) => {
     //remove spaces from the string
@@ -78,4 +83,32 @@ const evaluateMath = (mathString) => {
 
 };
 
+// below being used for testing on jsfiddle
 
+/*
+const test = (actual, expected) => {
+    if (actual === expected) {
+        console.log("true");
+    } else {
+        console.warn(`Expected: ${expected}, got ${actual} instead`);
+    }
+};
+
+const testAgainstEval = (mathString) => {
+    test(evaluateMath(mathString), String(eval(mathString)));
+};
+
+testAgainstEval("200 + 200");
+testAgainstEval("-4 + -5");
+testAgainstEval("2 - 2");
+testAgainstEval("2 * 2");
+testAgainstEval("2 / 2");
+testAgainstEval("2 + 2 * 2");
+testAgainstEval("2 * 2 + 2");
+testAgainstEval("2 * 2 + 2 * 4");
+testAgainstEval("2 * 2 + 2 * 4 + 2 * 2");
+testAgainstEval("(1 + 2) * 3");
+testAgainstEval("(1 + 2) * 3 + 1");
+testAgainstEval("(1 + 2) * (3 + 1)");
+testAgainstEval("((2 * 5 + 1) + (3 * 1 + 1)) * 2");
+*/
