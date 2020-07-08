@@ -9,3 +9,12 @@ developButton("basic", 'c', "clear", e => {
     display.innerHTML = '0';
     preparedDisplay.innerHTML = '';
 });
+
+
+let op_arr=new Array("+","-","/","*");
+for( let i=0;i<op_arr.length;i++)
+    developButton("ops",op_arr[i], "op_set", e => {
+        const display = document.getElementsByClassName("display")[0];
+
+
+    });
