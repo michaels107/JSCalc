@@ -11,8 +11,8 @@ developButton("memory", 'MS', "mem_set", e => {
     last_val = display.innerHTML;
 
     /* Memory button generation in display */
-    developButton("mem_display", last_val, "mem_list", e => {
-        display.innerHTML = last_val;
+    developButton("mem_display", last_val, last_val, e => {
+        display.innerHTML = e.target.name;
     });
     button_count++;
 });
