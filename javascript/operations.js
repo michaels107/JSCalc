@@ -1,10 +1,13 @@
 /*
 Created 7/7/2020 by Caroline Wheeler
-
+Edited 7/8/20 by Reema Gupta
 
 Note - Arrow operator: => , allows for shorter function syntax.
 */
-
+/*
+Changed regular expression so that it could take in negative numbers
+*/
+const regrex="(-)?(\d\.\d|\d)"
 /*
 Created 7/7/2020 by Caroline Wheeler
 Takes a string(sym) and a function(operation) and
