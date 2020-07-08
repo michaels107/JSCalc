@@ -1,4 +1,6 @@
 /*Created 7/3/2020 by Duytan Tran
+* Edited 7/7/2020 by Sean Michaels
+* Edited 7/8/2020 by Duytan Tran: Additional documentation
 * Javascript function for the generation of calculator buttons*/
 
 /*Created 7/3/2020 by Duytan Tran
@@ -25,4 +27,3 @@ function developButton(parentName, content, name, listenerFunction){
 function deleteButton(element){
     element.parentElement.removeChild(element);
 }
-
