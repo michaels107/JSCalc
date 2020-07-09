@@ -12,6 +12,7 @@ const regex="(-)?(\\d\\.\\d|\\d)+";
 
 /*
 Created 7/7/2020 by Caroline Wheeler
+Updated 7/9/2020 by Caroline Wheeler: Resolves issue of subtraction with negatives.
 Takes a string(sym) and a function(operation) and
 returns an object with two properties (operation & find matches).
 The value of both properties is a function.
@@ -22,25 +23,24 @@ const CreateSimpleOperation = (sym, op) => ({
         //Create a regular expression which takes the given symbol between two floats/ints.
         Array.from(new Set(str.match(new RegExp( regex+ "\\" + sym + regex, "g")))),
     // operation takes a string as a param, splits at the symbol into an array containing numbers
-    evaluate: (match) => op(match.split(sym).map(parseFloat)),
+    evaluate: (match) => {
+        const indexOfSymbol = new RegExp(
+            `(?<=(${regex}))\\${sym}(?=${regex})`
+        ).exec(match).index;
+        return op(
+            [match.slice(0, indexOfSymbol), match.slice(indexOfSymbol + 1)].map((n) =>
+                Number(n)));
+    },
 });
 
-/*
-Reema does trig stuff here.
- */
 
 /*
 Created 7/7/2020 by Caroline Wheeler
 Edited 7/9/2020 by Duytan Tran: mod button
-Edited 7/9/2020 by Caroline Wheeler: added operation to subtract negatives.
 An Array that holds objects creating from calling functions to create.
 These are in the correct order of operations.
  */
 const operations = [
-    //Replaces -- with + : Resolves issue with subtracting negative numbers.
-    {findMatches: (str) => Array.from(new Set(str.match("--"))),
-        evaluate: () => "+",
-    },
     //handles parens
     {findMatches: (str) =>
             Array.from(new Set(str.match(new RegExp("\\([^\\(\\)]+\\)", "g")))),
