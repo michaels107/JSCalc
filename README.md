@@ -1,5 +1,6 @@
 # Project 5
 ### JavaScript Calculator
+A webpage calculator featuring 10 digits, trig operations, basic mathematical operations (+-/*), memory buttons and functions, sign, decimals, eulers, pi, square root, absolutve value, accumulator, and more.
 
 ### Roles
 * Overall Project Manager: Reema Gupta
@@ -8,5 +9,7 @@
 * Documentation: Duytan Tran
 
 ### Contributions
-Please list who did what for each part of the project.
-Also list if people worked together (pair programmed) on a particular section.
+* Button generation function, 0-9 digit generation, accumulator logic,  initial html/css, absolute value, modulus, factorial, and testing: Duytan Tran
+
+### How to Execute
+* cd to the downloaded Project-5-Quaranteam directy and open calculator.html in firefox
