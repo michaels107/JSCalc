@@ -3,6 +3,7 @@ Created 6/30/2020 by Duytan Tran
 Edited 7/1/2020 by Caroline Wheeler: Updated styling
 Edited 7/7/2020 by Sean Michaels: Created a container so that memory display will be up and some CSS for that display.
                                     Fixed some CSS for the calculator and the memory display.
+Edited 7/9/2020 by Reema Gupta: Increased the size of the calculator
 CSS code styling for calculator.html
 */
 
@@ -35,7 +36,7 @@ body{
     width: 375px;
     background: lightslategray;
     padding: 10px;
-    max-height: 275px;
+    max-height: 300px;
 }
 
 /*
