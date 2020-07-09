@@ -2,6 +2,7 @@
 Created 7/7/2020 by Caroline Wheeler
 Edited 7/8/2020 by Reema Gupta
 Edited 7/8/2020 by Duytan Tran: fixed lack of backslashes and + sign in regex
+Edited 7/9/2020 by Duytan Tran
 
 Note - Arrow : => , allows for shorter function syntax.
 */
@@ -30,6 +31,7 @@ Reema does trig stuff here.
 
 /*
 Created 7/7/2020 by Caroline Wheeler
+Edited 7/9/2020 by Duytan Tran: mod button
 An Array that holds objects creating from calling functions to create.
 These are in the correct order of operations.
  */
@@ -46,6 +48,7 @@ const operations = [
     CreateSimpleOperation("/", ([a, b]) => a / b),
     CreateSimpleOperation("+", ([a, b]) => a + b),
     CreateSimpleOperation("-", ([a, b]) => a - b),
+    CreateSimpleOperation("%", ([a, b]) => a % b),
 ];
 
 /*
@@ -98,4 +101,4 @@ const test = (actual, expected) => {
 const testAgainstEval = (mathString) => {
     test(evaluateMath(mathString), String(eval(mathString)));
 };
-
+*/

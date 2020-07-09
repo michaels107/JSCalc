@@ -1,6 +1,7 @@
 /*Created 7/3/2020 by Duytan Tran
 * Edited 7/7/2020 by Sean Michaels
 * Edited 7/8/2020 by Duytan Tran: Additional documentation, added listener to non-digits/non-sign buttons
+* Edited 7/9/2020 by Duytan Tran: Added backspace to the newInput conditional
 * Javascript function for the generation of calculator buttons*/
 
 const digits = document.getElementsByName("digits")[0];
@@ -22,8 +23,8 @@ function developButton(parentName, content, name, listenerFunction){
     button.setAttribute("name", name);
     button.addEventListener("click", listenerFunction);
 
-    // Allows a new digit input to be had if a non-digit/sign button was pressed
-    if(name != 'digit' && name != 'sign'){
+    // Allows a new digit input to be had if a non digit/sign-button/backspace was pressed
+    if(name != 'digit' && name != 'sign' && name != 'Backspace'){
         button.addEventListener("click", e =>{
                 digits.newInput = true;
         });

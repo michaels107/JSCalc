@@ -6,6 +6,7 @@ Edited 7/1/2020 by Reema Gupta : Added decimal button
 Edited 7/1/2020 by Caroline Wheeler: Added addition button
 Edited 7/3/2020 by Duytan Tran: Restructured for javascript button generation
 Edited 7/7/2020 by Sean Michaels: Implemented Pi, Sign, and memory. Added a memory table for things store in memory.
+Edited 7/9/2020 by Duytan Tran: Initial display value is 0
 Central HTML code for calculator web-page.
 -->
 <!DOCTYPE html>
@@ -19,14 +20,14 @@ Central HTML code for calculator web-page.
 <div class ="container">
     <div class="calculator">
         <div class="prepared_display"></div>
-        <div class="display"></div>
+        <div class="display">0</div>
         <div class="buttons">
             <div name="memory"></div>
             <div name="ops"></div>
             <div name="digits"></div>
-            <div name="basic"></div>
-            <div name="extra"></div>
             <div name="extra1"></div>
+            <div name="extra"></div>
+            <div name="basic"></div>
         </div>
     </div>
     <div class ="memory_display" name="mem_display">Memory</div>
