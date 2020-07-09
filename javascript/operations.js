@@ -1,12 +1,13 @@
 /*
 Created 7/7/2020 by Caroline Wheeler
-Edited 7/8/20 by Reema Gupta
+Edited 7/8/2020 by Reema Gupta
+Edited 7/8/2020 by Duytan Tran: fixed lack of backslashes and + sign in regex
 
 Note - Arrow : => , allows for shorter function syntax.
 */
 
 //Changed regular expression so that it could take in negative numbers - Reema Gupta
-const regex="(-)?(\d\.\d|\d)";
+const regex="(-)?(\\d\\.\\d|\\d)+";
 
 /*
 Created 7/7/2020 by Caroline Wheeler
