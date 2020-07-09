@@ -80,3 +80,13 @@ developButton("basic","<-","Backspace", e => {
         display.innerHTML="0";
     }
 });
+
+/*Created 7/9/2020 by Reema Gupta
+Decimal Button Generation
+*/
+developButton("basic",".","Decimal", e => {
+    const display = document.getElementsByClassName("display")[0];
+    const preparedDisplay = document.getElementsByClassName("prepared_display")[0];
+    preparedDisplay.innerHTML = display.innerHTML + e.target.textContent;
+    display.innerHTML = display.innerHTML;
+});

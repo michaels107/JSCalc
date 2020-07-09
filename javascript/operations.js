@@ -89,7 +89,7 @@ const evaluateMath = (mathString) => {
 
 };
 
-// below being used for testing on jsfiddle
+// below being used for testing on jsfiddle -Caroline
 
 /*
 const test = (actual, expected) => {
