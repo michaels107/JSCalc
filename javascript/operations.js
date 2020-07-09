@@ -32,13 +32,15 @@ Reema does trig stuff here.
 /*
 Created 7/7/2020 by Caroline Wheeler
 Edited 7/9/2020 by Duytan Tran: mod button
+Edited 7/9/2020 by Caroline Wheeler: added operation to subtract negatives.
 An Array that holds objects creating from calling functions to create.
 These are in the correct order of operations.
  */
 const operations = [
-    // Reema - create trig operations here
-    // any other additional operations just need to be in the correct order
-
+    //Replaces -- with + : Resolves issue with subtracting negative numbers.
+    {findMatches: (str) => Array.from(new Set(str.match("--"))),
+        evaluate: () => "+",
+    },
     //handles parens
     {findMatches: (str) =>
             Array.from(new Set(str.match(new RegExp("\\([^\\(\\)]+\\)", "g")))),
