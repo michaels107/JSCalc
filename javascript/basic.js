@@ -38,4 +38,18 @@ developButton("basic","=","equals", e => {
     preparedDisplay.innerHTML=" ";
 
 });
+/*
+Created 7/8/2020 By Reema Gupta
+Backspace button Generation
+ */
+
+developButton("basic","<-","Backspace", e => {
+    const display = document.getElementsByClassName("display")[0];
+    if (display.innerHTML.length >= 1){
+        display.innerHTML = display.innerHTML.slice(0, -1);
+      }
+    else{
+        display.innerHTML="";
+    }
+});
 
