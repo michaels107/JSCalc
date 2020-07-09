@@ -104,6 +104,6 @@ body{
     Styling for the Memory display.
     Background of button when mouse is hovering.
 */
-.btn-group button:hover {
-    background-color: #3e8e41;
+.memory_display button:hover {
+    background-color: #61c8fd;
 }

@@ -22,3 +22,20 @@ developButton("extra", '+/-', "sign", e => {
         display.innerHTML = Math.abs(display.innerHTML);
     }
 });
+
+/*
+    Created 7/7/2020 by Sean Michaels
+    e button generation
+*/
+developButton("extra", 'e', "euler's", e => {
+    const display = document.getElementsByClassName("display")[0];
+    display.innerHTML = 2.71828;
+});
+/*
+    Created 7/7/2020 by Sean Michaels
+    square root button generation
+*/
+developButton("extra", '√x', "square_root", e => {
+    const display = document.getElementsByClassName("display")[0];
+    display.innerHTML = Math.sqrt(display.innerHTML);
+});
