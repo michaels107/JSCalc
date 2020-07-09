@@ -36,10 +36,6 @@ developButton("basic","=","equals", e => {
     const preparedDisplay = document.getElementsByClassName("prepared_display")[0];
     display.innerHTML = evaluateMath(preparedDisplay.innerHTML+display.innerHTML);
     preparedDisplay.innerHTML=" ";
-    if(display.innerHTML==="Infinity"){
-        display.innerHTML=="error";
-        preparedDisplay.innerHTML="divide by 0 error";
-    }
 
 });
 

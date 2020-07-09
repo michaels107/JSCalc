@@ -99,17 +99,3 @@ const testAgainstEval = (mathString) => {
     test(evaluateMath(mathString), String(eval(mathString)));
 };
 
-testAgainstEval("200 + 200");
-testAgainstEval("-4 + -5");
-testAgainstEval("2 - 2");
-testAgainstEval("2 * 2");
-testAgainstEval("2 / 2");
-testAgainstEval("2 + 2 * 2");
-testAgainstEval("2 * 2 + 2");
-testAgainstEval("2 * 2 + 2 * 4");
-testAgainstEval("2 * 2 + 2 * 4 + 2 * 2");
-testAgainstEval("(1 + 2) * 3");
-testAgainstEval("(1 + 2) * 3 + 1");
-testAgainstEval("(1 + 2) * (3 + 1)");
-testAgainstEval("((2 * 5 + 1) + (3 * 1 + 1)) * 2");
-*/
