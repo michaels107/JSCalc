@@ -19,6 +19,7 @@ developButton("basic", 'c', "clear", e => {
 /*
 Created 7/8/2020 By Reema Gupta
 Edited 7/9/2020 by Duytan Tran: added mod button, maintain display value
+Edited 7/9/2020 by Duytan Tran: implemented solution upon picking a operation after inputting second number
 Basic operator button generation
  */
 let op_arr = ["+","-","/","*", "%"];
@@ -26,16 +27,31 @@ for( let i=0;i<op_arr.length;i++)
     developButton("ops",op_arr[i], "op_set", e => {
         const display = document.getElementsByClassName("display")[0];
         const preparedDisplay = document.getElementsByClassName("prepared_display")[0];
-        preparedDisplay.innerHTML = display.innerHTML + " " + op_arr[i] + " ";
+        if(digits.newInput){
+            preparedDisplay.innerHTML = display.innerHTML + " " + op_arr[i] + " ";
+        }else{
+            solve();
+            preparedDisplay.innerHTML = display.innerHTML + " " + op_arr[i] + " ";
+            display.innerHTML = display.innerHTML;
+        }
     });
 
 /*
 Created 7/8/2020 By Reema Gupta
 Edited 7/9/2020 By Reema Gupta: added case  when only one number, and operator is pressed
 Edited 7/9/2020 by Duytan Tran: Single number case covered in operator button generation, added accumulator logic
+Edited 7/9/2020 by Duytan Tran: moved implementation into its own function so that it can be called in operations too
 Equal button Generation and mathematical operation
  */
 developButton("basic","=","equals", e => {
+    solve();
+});
+
+/*
+Created 7/9/2200 by Duytan Tran
+Execution of outputting the answer to the display when the calculator has two numbers and an operand
+*/
+function solve(){
     const display = document.getElementsByClassName("display")[0];
     const preparedDisplay = document.getElementsByClassName("prepared_display")[0];
     // Checks whether accumulating or new operation and acts accordingly
@@ -49,7 +65,7 @@ developButton("basic","=","equals", e => {
         display.innerHTML = evaluateMath(preparedDisplay.innerHTML + display.innerHTML);
         preparedDisplay.innerHTML = "";
     }
-});
+}
 
 /*
 Created 7/8/2020 By Reema Gupta

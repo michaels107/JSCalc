@@ -25,7 +25,7 @@ const CreateSimpleOperation = (sym, op) => ({
     // operation takes a string as a param, splits at the symbol into an array containing numbers
     evaluate: (match) => {
         const indexOfSymbol = new RegExp(
-            `(?<=(${regex}))\\${sym}(?=${regex})`
+            `(?<=(${regex}))\\${sym}(?=${regex})`, "g"
         ).exec(match).index;
         return op(
             [match.slice(0, indexOfSymbol), match.slice(indexOfSymbol + 1)].map((n) =>
