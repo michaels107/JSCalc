@@ -72,7 +72,11 @@ developButton("memory", 'M*', "mem_mult", e => {
 */
 developButton("memory", 'M/', "mem_div", e => {
     const display = document.getElementsByClassName("display")[0];
-    last_val /= parseFloat(display.innerHTML);
+    if(display.innerHTML == 0){
+        window.alert("Tried to divide by zero.")
+    }else {
+        last_val /= parseFloat(display.innerHTML);
+    }
     updateMemoryButton();
 });
 
