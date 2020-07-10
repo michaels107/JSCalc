@@ -1,0 +1,54 @@
+Created 7/9/2020 by Duytan Tran
+Testing for factorial function
+
+Test #1: Passing 0
+Expected: 1
+Actual: 1
+
+Test #2: Passing 1
+Expected: 1
+Actual: 1
+
+Test #3: Passing 2
+Expected: 2
+Actual: 2
+
+Test #4: Passing 3
+Expected: 6
+Actual: 6
+
+Test #5: Passing 4
+Expected: 24
+Actual: 24
+
+Test #6: Passing 5
+Expected: 120
+Actual: 120
+
+Test #7: Passing 10
+Expected: 3628800
+Actual: 3628800
+
+Test #8: Passing -1
+Expected: -1
+Actual: -1
+
+Test #9: Passing -2
+Expected: -2
+Actual: -2
+
+Test #4: Passing -3
+Expected: -6
+Actual: -6
+
+Test #5: Passing -4
+Expected: -24
+Actual: -24
+
+Test #6: Passing -5
+Expected: -120
+Actual: -120
+
+Test #7: Passing -10
+Expected: -3628800
+Actual: -3628800

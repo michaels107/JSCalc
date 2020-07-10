@@ -1,0 +1,80 @@
+Created 7/9/2020 by Duytan Tran
+Systems testing for remainder button
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #1: 	0 % 0
+Description: 0 % 0 is entered followed by equals
+Expected Out: Some error is outputted
+Actual Out: NaN is outputted
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #2: 	0 % 1
+Description: 0 % 1 is entered followed by equals
+Expected Out: 0 is outputted
+Actual Out: 0 is outputted
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #3: 	0 % 5
+Description: 0 % 5 is entered followed by equals
+Expected Out: 0 is outputted
+Actual Out: 0 is outputted
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #4: 	1 % 2
+Description: 1 % 2 is entered followed by equals
+Expected Out: 1 is outputted
+Actual Out: 1 is outputted
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #5: 	1 % 5
+Description: 1 % 5 is entered followed by equals
+Expected Out: 1 is outputted
+Actual Out: 1 is outputted
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #6: 	2 % 0
+Description: 2 % 0 is entered followed by equals
+Expected Out: error is outputted
+Actual Out: NaN is outputted
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #7: 	2 % 2
+Description: 2 % is entered followed by equals
+Expected Out: 0 is outputted
+Actual Out: 0 is outputted
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #8: 	97 % 7
+Description: 97 % 7 is entered followed by equals
+Expected Out: 6 is outputted
+Actual Out: 6 is outputted
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #9: 	-2 % 1
+Description: -2 % 1 is entered followed by equals
+Expected Out: 0 is outputted
+Actual Out: 0 is outputted
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #10: 	-6 % 5
+Description: -6 % 5 is entered followed by equals
+Expected Out: -1 is outputted
+Actual Out: -1 is outputted
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #11: 	-6 % 7
+Description: -6 % 7 is entered followed by equals
+Expected Out: -6 is outputted
+Actual Out: -6 is outputted
+
