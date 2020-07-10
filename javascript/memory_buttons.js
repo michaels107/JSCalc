@@ -12,7 +12,7 @@ let button_count = 0;
                                     last_val is given a float value instead of string
     Memory Set button generation
 */
-developButton("memory", 'MS', "mem_set", e => {
+developButton("memory", 'MS', "mem_set", () => {
     const display = document.getElementsByClassName("display")[0];
     last_val = parseFloat(display.innerHTML);
 
@@ -27,7 +27,7 @@ developButton("memory", 'MS', "mem_set", e => {
     Created 7/7/2020 by Sean Michaels
     Memory Recall button generation
 */
-developButton("memory", 'MR', "mem_recall", e => {
+developButton("memory", 'MR', "mem_recall", () => {
     const display = document.getElementsByClassName("display")[0];
     display.innerHTML = last_val;
 });
@@ -37,7 +37,7 @@ developButton("memory", 'MR', "mem_recall", e => {
     Edited 7/8/2020 by Duytan Tran: Added call to updateMemoryButton
     Memory Addition button generation
 */
-developButton("memory", 'M+', "mem_add", e => {
+developButton("memory", 'M+', "mem_add", () => {
     const display = document.getElementsByClassName("display")[0];
     last_val += parseFloat(display.innerHTML);
     updateMemoryButton();
@@ -48,7 +48,7 @@ developButton("memory", 'M+', "mem_add", e => {
     Edited 7/8/2020 by Duytan Tran: Added call to updateMemoryButton
     Memory Subtraction button generation
 */
-developButton("memory", 'M-', "mem_sub", e => {
+developButton("memory", 'M-', "mem_sub", () => {
     const display = document.getElementsByClassName("display")[0];
     last_val -= parseFloat(display.innerHTML);
     updateMemoryButton();
@@ -59,7 +59,7 @@ developButton("memory", 'M-', "mem_sub", e => {
     Edited 7/8/2020 by Duytan Tran: Added call to updateMemoryButton
     Memory Multiply button generation
 */
-developButton("memory", 'M*', "mem_mult", e => {
+developButton("memory", 'M*', "mem_mult", () => {
     const display = document.getElementsByClassName("display")[0];
     last_val *= parseFloat(display.innerHTML);
     updateMemoryButton();
@@ -70,9 +70,9 @@ developButton("memory", 'M*', "mem_mult", e => {
     Edited 7/8/2020 by Duytan Tran: Added call to updateMemoryButton
     Memory Divide button generation
 */
-developButton("memory", 'M/', "mem_div", e => {
+developButton("memory", 'M/', "mem_div", () => {
     const display = document.getElementsByClassName("display")[0];
-    if(display.innerHTML == 0){
+    if(display.innerHTML === "0"){
         window.alert("Tried to divide by zero.")
     }else {
         last_val /= parseFloat(display.innerHTML);
@@ -85,7 +85,7 @@ developButton("memory", 'M/', "mem_div", e => {
     Edited 7/8/2020 by Duytan Tran: Reset last_val/button_count to 0, retrieves display mem buttons
     Memory clear button generation
 */
-developButton("memory", 'MC', "mem_clear", e => {
+developButton("memory", 'MC', "mem_clear", () => {
     let elements = document.getElementsByName("mem");
     while(elements.length > 0) {
         deleteButton(elements[elements.length-1])

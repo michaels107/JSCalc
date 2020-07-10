@@ -48,14 +48,17 @@ developButton("basic","=","equals", e => {
 });
 
 /*
-Created 7/9/2200 by Duytan Tran
+Created 7/9/2000 by Duytan Tran
+Edited 7/9/2020 by Duytan Tran: Prevent division by 0
 Execution of outputting the answer to the display when the calculator has two numbers and an operand
 */
 function solve(){
     const display = document.getElementsByClassName("display")[0];
     const preparedDisplay = document.getElementsByClassName("prepared_display")[0];
     // Checks whether accumulating or new operation and acts accordingly
-    if (digits.accumulate && !noMatches(display.innerHTML + digits.accumulateHalf)) {
+    if(preparedDisplay.innerHTML.includes("/") && display.innerHTML == "0") {
+        window.alert("Tried to divide by zero.")
+    }else if(digits.accumulate && !noMatches(display.innerHTML + digits.accumulateHalf)) {
         display.innerHTML = evaluateMath(display.innerHTML + digits.accumulateHalf);
         preparedDisplay.innerHTML = "";
     } else {

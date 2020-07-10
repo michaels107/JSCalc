@@ -1,0 +1,58 @@
+Created 7/9/2020 by Duytan Tran
+Systems testing for accumulator
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #1: 	accumulator for + 0
+Description: 0 + 0 followed by multiple equals
+Expected Out: no visible changes
+Actual Out: no visible changes
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #2: 	accumulator for + 1
+Description: 2 + 1 followed by multiple equals
+Expected Out: first solution is 3, following increase by 1
+Actual Out: first solution is 3, following increase by 1
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #3: 	accumulator for + 5
+Description: 10 + 5 followed by multiple equals
+Expected Out: first solution is 15, following increase by 5
+Actual Out: first solution is 15, following increase by 5
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #4: 	accumulator for - 1
+Description: 0 - 1 followed by multiple equals
+Expected Out: first solution is -1, following increase by -1
+Actual Out: first solution is -1, following increase by -1
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #5: 	accumulator for - 5
+Description: -5 - 5 followed by multiple equals
+Expected Out: first solution is -10, following increase by -5
+Actual Out: first solution is -10, following increase by -5
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #6: 	accumulator for - -5
+Description: 0 --5 followed by multiple equals
+Expected Out: first solution is 5, following increase by 5
+Actual Out: first solution is 5, following increase by 5
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #7: 	accumulator for /2
+Description: 100/2 followed by multiple equals
+Expected Out: first solution is 50, followed by 25, 12.5, 6.25, ...
+Actual Out: first solution is 50, followed by 25, 12.5, 6.25, ...
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #8: 	accumulator for *4
+Description: 1*4 followed by multiple equals
+Expected Out: first solution is 4, followed by multiples of 4, 16, 64, ...
+Actual Out: first solution is 4, followed by multiples of 4, 16, 64, ...

@@ -1,0 +1,128 @@
+Created 7/9/2020 by Duytan Tran
+Systems testing for basic operations (+-/*)
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #1: 	division by 0
+Description: 5 / 0 followed by equals
+Expected Out: error is shown
+Actual Out: alert stating division by 0
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #2: 	square root of negative number
+Description: -7 followed by square root
+Expected Out: error is shown
+Actual Out: NaN is displayed
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #3: 	normal use of multiplication
+Description: 6 * 9 followed by equals
+Expected Out: 54
+Actual Out: 54
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #4: 	normal use of addition
+Description: 6 + 9 followed by equals
+Expected Out: 15
+Actual Out: 15
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #5: 	normal use of subtraction
+Description: 6 - 9 followed by equals
+Expected Out: -3
+Actual Out: -3
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #6: 	normal use of division
+Description: 6 / 9 followed by equals
+Expected Out: 0.6666
+Actual Out: 0.6666
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #7: 	negative divided by negative
+Description: -6 / -9 followed by equals
+Expected Out: 0.6666
+Actual Out: 0.6666
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #8: 	negative divided by positive
+Description: -6 / 9 followed by equals
+Expected Out: -0.6666
+Actual Out: -0.6666
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #9: 	positive divided by negative
+Description: 6 / -9 followed by equals
+Expected Out: -0.6666
+Actual Out: -0.6666
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #10: 	positive subtracted by negative
+Description: 6 - -9 followed by equals
+Expected Out: 15
+Actual Out: 15
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #11: 	negative subtracted by negative
+Description: -6 - -9 followed by equals
+Expected Out: 3
+Actual Out: 3
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #12: 	negative subtracted by positive
+Description: -6 - 9 followed by equals
+Expected Out: -15
+Actual Out: -15
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #13: 	negative added by positive
+Description: -6 + 9 followed by equals
+Expected Out: 3
+Actual Out: 3
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #14: 	negative added by negative
+Description: -6 + -9 followed by equals
+Expected Out: -15
+Actual Out: -15
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #15: 	positive added by negative
+Description: 6 + -9 followed by equals
+Expected Out: -3
+Actual Out: -3
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #16: 	positive multiplied by negative
+Description: 6 * -9 followed by equals
+Expected Out: -54
+Actual Out: -54
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #17: 	negative multiplied by positive
+Description: -6 * 9 followed by equals
+Expected Out: -54
+Actual Out: -54
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #18: 	negative multiplied by negative
+Description: -6 * -9 followed by equals
+Expected Out: 54
+Actual Out: 54

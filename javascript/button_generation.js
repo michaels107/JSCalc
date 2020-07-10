@@ -25,15 +25,15 @@ function developButton(parentName, content, name, listenerFunction){
     button.addEventListener("click", listenerFunction);
 
     // Allows a new digit input to be had if a non digit/sign-button/backspace was pressed
-    if(name != 'digit' && name != 'sign' && name != 'Backspace'){
-        button.addEventListener("click", e =>{
+    if(name !== 'digit' && name !== 'sign' && name !== 'Backspace'){
+        button.addEventListener("click", () =>{
                 digits.newInput = true;
         });
     }
 
     // Allows accumulator logic to be implemented in equals button
-    if(name != 'equals'){
-        button.addEventListener("click", e =>{
+    if(name !== 'equals'){
+        button.addEventListener("click", () =>{
             digits.accumulate = false;
             digits.accumulateHalf = '';
         })

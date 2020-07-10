@@ -7,7 +7,7 @@ Edited 7/9/2020 by Duytan Tran: added factorial button
     Created 7/7/2020 by Sean Michaels
     Pi button generation
 */
-developButton("extra", 'π', "pi", e => {
+developButton("extra", 'π', "pi", () => {
     const display = document.getElementsByClassName("display")[0];
     display.innerHTML = 3.14159265359;
 });
@@ -16,7 +16,7 @@ developButton("extra", 'π', "pi", e => {
     Created 7/7/2020 by Sean Michaels
     Sign button generation
 */
-developButton("extra", '+/-', "sign", e => {
+developButton("extra", '+/-', "sign", () => {
     const display = document.getElementsByClassName("display")[0];
     if(display.innerHTML > 0){
         display.innerHTML = -display.innerHTML;
@@ -29,7 +29,7 @@ developButton("extra", '+/-', "sign", e => {
     Created 7/7/2020 by Sean Michaels
     e button generation
 */
-developButton("extra", 'e', "euler's", e => {
+developButton("extra", 'e', "euler's", () => {
     const display = document.getElementsByClassName("display")[0];
     display.innerHTML = 2.71828;
 });
@@ -38,7 +38,7 @@ developButton("extra", 'e', "euler's", e => {
     Created 7/7/2020 by Sean Michaels
     square root button generation
 */
-developButton("extra", '√x', "square_root", e => {
+developButton("extra", '√x', "square_root", () => {
     const display = document.getElementsByClassName("display")[0];
     display.innerHTML = Math.sqrt(display.innerHTML);
 });
@@ -47,7 +47,7 @@ developButton("extra", '√x', "square_root", e => {
     Created 7/9/2020 by Reema Gupta
     trigonometry button generation (sin)
 */
-developButton("ops", 'sin', "sin", e => {
+developButton("ops", 'sin', "sin", () => {
     const display = document.getElementsByClassName("display")[0];
     display.innerHTML = Math.sin(display.innerHTML);
 });
@@ -56,7 +56,7 @@ developButton("ops", 'sin', "sin", e => {
     Created 7/9/2020 by Reema Gupta
     trigonometry button generation (cos)
 */
-developButton("ops", 'cos', "cosine", e => {
+developButton("ops", 'cos', "cosine", () => {
     const display = document.getElementsByClassName("display")[0];
     display.innerHTML = Math.cos(display.innerHTML);
 });
@@ -65,7 +65,7 @@ developButton("ops", 'cos', "cosine", e => {
     Created 7/9/2020 by Reema Gupta
     trigonometry button generation (tan)
 */
-developButton("ops", 'tan', "tangent", e => {
+developButton("ops", 'tan', "tangent", () => {
     const display = document.getElementsByClassName("display")[0];
     display.innerHTML = Math.tan(display.innerHTML);
 });
@@ -74,7 +74,7 @@ developButton("ops", 'tan', "tangent", e => {
     Created 7/9/2020 by Duytan Tran
     Factorial button generation, forces input to be integer
 */
-developButton("extra1", '!', "factorial", e => {
+developButton("extra1", '!', "factorial", () => {
     const display = document.getElementsByClassName("display")[0];
     display.innerHTML = factorial(parseInt(display.innerHTML));
 });
@@ -86,7 +86,7 @@ developButton("extra1", '!', "factorial", e => {
     @param input: integer to be calculated
 */
 function factorial(input){
-    if(input == 0){
+    if(input === 0){
         return 1;
     } else {
         if(input < 0){
@@ -102,7 +102,7 @@ function factorial(input){
     Created 7/9/2020 by Duytan Tran
     Absolute value button generation
 */
-developButton("extra1", 'abs', "absolute_value", e => {
+developButton("extra1", 'abs', "absolute_value", () => {
     const display = document.getElementsByClassName("display")[0];
-    display.innerHTML = Math.abs(parseFloat(display.innerHTML));
+    display.innerHTML = Math.abs(parseFloat(display.innerHTML + ""));
 });

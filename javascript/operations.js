@@ -43,7 +43,7 @@ These are in the correct order of operations.
 const operations = [
     //handles parens
     {findMatches: (str) =>
-            Array.from(new Set(str.match(new RegExp("\\([^\\(\\)]+\\)", "g")))),
+            Array.from(new Set(str.match(new RegExp("\\([^()]+\\)", "g")))),
         evaluate: (match) => evaluateMath(match.replace("(", "").replace(")", "")),
     },
     CreateSimpleOperation("*", ([a, b]) => a * b),

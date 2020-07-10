@@ -1,0 +1,58 @@
+Created 7/9/2020 by Duytan Tran
+Systems testing for chaining operations one after the other
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #1: 	subtract to addition
+Description: 5 - 7 followed by + 3 and equals
+Expected Out: 1
+Actual Out: 1
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #2: 	addition to division
+Description: 3 + 2 followed by / 5 and equals
+Expected Out: 1
+Actual Out: 1
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #3: 	division to multiplication
+Description: 9 / 3 followed by * 7 and equals
+Expected Out: 21
+Actual Out: 21
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #4: 	division to multiplication
+Description: 9 / 3 followed by * 7 and equals
+Expected Out: 21
+Actual Out: 21
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #5: 	addition to addition
+Description: 4 + 3 followed by + 6 and equals
+Expected Out: 13
+Actual Out: 13
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #6: 	minus to minus
+Description: 4 - 3 followed by - 6 and equals
+Expected Out: -5
+Actual Out: -5
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #7: 	division to division
+Description: 9 / 3 followed by / 3 and equals
+Expected Out: 1
+Actual Out: 1
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #8: 	multiplication to multiplication
+Description: 4 * 4 followed by * 2 and equals
+Expected Out: 32
+Actual Out: 32

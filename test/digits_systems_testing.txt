@@ -1,0 +1,65 @@
+Created 7/9/2020 by Duytan Tran
+Systems testing for digit buttons
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #1: 	first digit
+Description: 0 is entered on fresh screen
+Expected Out: Nothing happens
+Actual Out: Nothing happens
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #2: 	first digit
+Description: 5 is entered on fresh screen
+Expected Out: 5 is on primary display
+Actual Out: 5 is on primary display
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #3: 	second digit
+Description: 0 is entered on screen with 5
+Expected Out: 50 is on primary display
+Actual Out: 50 is on primary display
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #4: 	negative digit is entered
+Description: 2 is entered followed by negative button
+Expected Out: -2 is on primary display
+Actual Out: -2 is on primary display
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #5: 	digit is entered on screen with -2
+Description: 4 is entered after -2
+Expected Out: -24 is on primary display
+Actual Out: -24 is on primary display
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #5: 	digit is entered on screen with -2
+Description: 4 is entered after -2
+Expected Out: -24 is on primary display
+Actual Out: -24 is on primary display
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #6: 	digit is entered followed by addition operand
+Description: 7 is entered followed by +
+Expected Out: 7 + is on secondary display, 7 is on primary
+Actual Out: 7 + is on secondary display, 7 is on primary
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #7: 	new number is entered after 7 + is on secondary display
+Description: 7 and + are entered followed by 3
+Expected Out: 7 + is on secondary display, 3 is on primary
+Actual Out: 7 + is on secondary display, 3 is on primary
+
+Author: Duytan Tran
+Date: 7/9/2020
+Test #8: 	digit is pressed after equals is pressed for 3 + 1
+Description: 3 + 1 are entered, followed by equals, followed by 6
+Expected Out: 6 is on primary display, secondary is empty
+Actual Out: 6 is on primary display, secondary is empty
