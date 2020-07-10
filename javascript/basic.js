@@ -27,13 +27,8 @@ for( let i=0;i<op_arr.length;i++)
     developButton("ops",op_arr[i], "op_set", e => {
         const display = document.getElementsByClassName("display")[0];
         const preparedDisplay = document.getElementsByClassName("prepared_display")[0];
-        if(digits.newInput){
-            preparedDisplay.innerHTML = display.innerHTML + " " + op_arr[i] + " ";
-        }else{
-            solve();
-            preparedDisplay.innerHTML = display.innerHTML + " " + op_arr[i] + " ";
-            display.innerHTML = display.innerHTML;
-        }
+        preparedDisplay.innerHTML += " " + op_arr[i] + " ";
+        display.innerHTML = "0";
     });
 
 /*
@@ -62,7 +57,7 @@ function solve(){
         //prepare consequent equal buttons presses for accumulator
         digits.accumulateHalf = preparedDisplay.innerHTML.charAt(preparedDisplay.innerHTML.length - 2) + display.innerHTML;
         digits.accumulate = true;
-        display.innerHTML = evaluateMath(preparedDisplay.innerHTML + display.innerHTML);
+        display.innerHTML = evaluateMath(preparedDisplay.innerHTML);
         preparedDisplay.innerHTML = "";
     }
 }
@@ -87,6 +82,6 @@ Decimal Button Generation
 developButton("basic",".","Decimal", e => {
     const display = document.getElementsByClassName("display")[0];
     const preparedDisplay = document.getElementsByClassName("prepared_display")[0];
-    preparedDisplay.innerHTML = display.innerHTML + e.target.textContent;
-    display.innerHTML = display.innerHTML;
+    preparedDisplay.innerHTML += e.target.textContent;
+    display.innerHTML += ".";
 });
