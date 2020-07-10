@@ -15,4 +15,4 @@ A webpage calculator featuring 10 digits, trig operations, basic mathematical op
 * CreateSimpleOperation function, noMatches function, evaluateOperation function, evaluateMath function, processing and generation of dual operator math button functionality, and operator precedence support: Caroline Wheeler
 
 ### How to Execute
-* cd to the downloaded Project-5-Quaranteam directy and open calculator.html in firefox
+* cd to the downloaded Project-5-Quaranteam directory and open calculator.html in firefox
