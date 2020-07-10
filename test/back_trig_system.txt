@@ -1,0 +1,63 @@
+System Testing:   
+•	Testing Backspace Button:
+Author: Reema Gupta
+Date: 7/9/2020
+Test : Testing backspace works
+Description: Testing backspace button by putting in "123456789" in the display box.
+ Expected Out: The backspace key will remove numbers one by one starting from right.
+ Actual Out:  Numbers are removed from the right end.
+
+
+•	Testing whether the sin function works:
+ Author: Reema Gupta 
+ Date: 7/9/2020
+ Test: Testing the sin operator
+ Description: Testing whether sin operator is working correctly by putting in sin 90.
+ Expected Out: 0.8939966636005579
+ Actual Out:  0.8939966636005579
+
+
+•	Testing whether the sin function works:
+ Author: Reema Gupta 
+ Date: 7/9/2020
+ Test: Testing whether sin works with other operators
+ Description: Testing whether sin operator is working correctly by putting in sin 90+sin90.
+ Expected Out: Gives the correct sum
+ Actual Out:  Gives the correct sum
+
+
+•	Testing whether the sin function works:
+ Author: Reema Gupta 
+ Date: 7/9/2020
+ Test: Testing the cos operator
+ Description: Testing whether sin operator is working correctly by putting in cos 90.
+ Expected Out -0.4480736161291701
+ Actual Out:  -0.4480736161291701
+
+
+•	Testing whether the sin function works:
+ Author: Reema Gupta 
+ Date: 7/9/2020
+ Test: Testing whether cos works with other operators
+ Description: Testing whether cos operator is working correctly by putting in cos 90+cos 90.
+ Expected Out: Gives the correct sum
+ Actual Out:  Gives the correct sum
+
+
+
+•	Testing whether the sin function works:
+ Author: Reema Gupta 
+ Date: 7/9/2020
+ Test: Testing the tan operator
+ Description: Testing whether sin operator is working correctly by putting in tan 90.
+ Expected Out: -1.995200412208242
+ Actual Out:  -1.995200412208242
+
+
+•	Testing whether the sin function works:
+ Author: Reema Gupta 
+ Date: 7/9/2020
+ Test: Testing whether tan works with other operators
+ Description: Testing whether sin operator is working correctly by putting in tan90+tan90.
+ Expected Out: Gives the correct sum
+ Actual Out:  Gives the correct sum
