@@ -4,7 +4,6 @@
 for(let i = 9; i >= 0; i--)
 {
     developButton("digits", i, "digit", e => {
-        const preparedDisplay = document.getElementsByClassName("prepared_display")[0];
         const display = document.getElementsByClassName("display")[0];
         if(display.innerHTML == "0" || digits.newInput){
             display.innerHTML = e.target.textContent;
@@ -12,6 +11,5 @@ for(let i = 9; i >= 0; i--)
         } else {
             display.innerHTML += e.target.textContent;
         }
-        preparedDisplay.textContent += e.target.textContent;
     });
 }
