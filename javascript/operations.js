@@ -36,7 +36,7 @@ const CreateSimpleOperation = (sym, op) => ({
 
 /*
 Created 7/7/2020 by Caroline Wheeler
-Edited 7/9/2020 by Duytan Tran: mod button
+Edited 7/9/2020 by Duytan Tran: remainder button
 An Array that holds objects creating from calling functions to create.
 These are in the correct order of operations.
  */

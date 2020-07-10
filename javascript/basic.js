@@ -2,7 +2,7 @@
 Edited  7/8/2020 by Reema Gupta: Added the Decimal Button
 Edited 7/8/2020 by Reema Gupta: Added the Equal and Mathematical operation generation
 Edited 7/9/2020 by Reema Gupta: added case  when only one number, and operator is pressed
-Edited 7/9/2020 by Duytan Tran: mod button and cleaner single number case, accumulator
+Edited 7/9/2020 by Duytan Tran: remainder button and cleaner single number case, accumulator
 * Relevant logic and generation for calculator basic buttons: clear & equals*/
 
 /*Created 7/3/2020 by Duytan Tran
@@ -18,7 +18,7 @@ developButton("basic", 'c', "clear", e => {
 
 /*
 Created 7/8/2020 By Reema Gupta
-Edited 7/9/2020 by Duytan Tran: added mod button, maintain display value
+Edited 7/9/2020 by Duytan Tran: added remainder button, maintain display value
 Edited 7/9/2020 by Duytan Tran: implemented solution upon picking a operation after inputting second number
 Basic operator button generation
  */
@@ -27,8 +27,13 @@ for( let i=0;i<op_arr.length;i++)
     developButton("ops",op_arr[i], "op_set", e => {
         const display = document.getElementsByClassName("display")[0];
         const preparedDisplay = document.getElementsByClassName("prepared_display")[0];
-        preparedDisplay.innerHTML += " " + op_arr[i] + " ";
-        display.innerHTML = "0";
+        if(digits.newInput){
+            preparedDisplay.innerHTML = display.innerHTML + " " + op_arr[i] + " ";
+        }else{
+            solve();
+            preparedDisplay.innerHTML = display.innerHTML + " " + op_arr[i] + " ";
+            display.innerHTML = display.innerHTML;
+        }
     });
 
 /*
@@ -57,7 +62,7 @@ function solve(){
         //prepare consequent equal buttons presses for accumulator
         digits.accumulateHalf = preparedDisplay.innerHTML.charAt(preparedDisplay.innerHTML.length - 2) + display.innerHTML;
         digits.accumulate = true;
-        display.innerHTML = evaluateMath(preparedDisplay.innerHTML);
+        display.innerHTML = evaluateMath(preparedDisplay.innerHTML + display.innerHTML);
         preparedDisplay.innerHTML = "";
     }
 }
@@ -74,14 +79,4 @@ developButton("basic","<-","Backspace", e => {
     }else{
         display.innerHTML="0";
     }
-});
-
-/*Created 7/9/2020 by Reema Gupta
-Decimal Button Generation
-*/
-developButton("basic",".","Decimal", e => {
-    const display = document.getElementsByClassName("display")[0];
-    const preparedDisplay = document.getElementsByClassName("prepared_display")[0];
-    preparedDisplay.innerHTML += e.target.textContent;
-    display.innerHTML += ".";
 });

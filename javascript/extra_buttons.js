@@ -81,6 +81,7 @@ developButton("extra1", '!', "factorial", e => {
 
 /*
     Created 7/9/2020 by Duytan Tran
+    Edited 7/9/2020 by Duytan Tran: modified to work for negative values
     Factorial algorithm that recursively calculates the factorial of a number
     @param input: integer to be calculated
 */
@@ -88,7 +89,12 @@ function factorial(input){
     if(input == 0){
         return 1;
     } else {
-        return input * factorial(input - 1);
+        if(input < 0){
+            input *= -1;
+            return -input * factorial(input - 1);
+        }else {
+            return input * factorial(input - 1);
+        }
     }
 }
 
