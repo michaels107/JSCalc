@@ -1,0 +1,111 @@
+Created 6/15/2020 by Sean Michaels
+Systems testing for the Memory.
+
+###TESTING_COMPARE_LISTINGS###
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #1: 	Memory buttons appear.
+Description: 	Testing the memory button appear when loading the html file.
+Expected Out:	MS, MR, M+, M*, M/, MC buttons appear inside the calculator.
+Actual Out: MS, MR, M+, M*, M/, MC buttons appeared inside the calculator.
+
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #2: 	Memory display appear.
+Description: 	Testing that the memory display appears.
+Expected Out:	The memory container div appears with correct CSS.
+Actual Out:     The memory container div appears with correct CSS.
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #3: 	Pressing MS.
+Description: 	Pressing MS will save the button to the display.
+Expected Out:	The current display value when MS is pressed will go to the memory display.
+Actual Out:	The current display value when MS is pressed went to the memory display.
+
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #4: 	MR recalls the last MS button called.
+Description: 	MR recalls the last MS button called.
+Expected Out:	MR recalls the last MS button called.
+Actual Out: MR recalled the last MS button called.
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #5: 	M+ adds the current display to the latest memory value.
+Description: 	M+ adds the current display to the latest memory value.
+Expected Out:	M+ adds the current display to the latest memory value.
+Actual Out: 	M+ adds the current display to the latest memory value.
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #6: 	M- subtracts the current display to the latest memory value.
+Description: 	M- subtracts the current display to the latest memory value.
+Expected Out:	M- subtracts the current display to the latest memory value.
+Actual Out: 	M- subtracts the current display to the latest memory value.
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #7: 	M* multiplies the current display to the latest memory value.
+Description: 	M* multiplies the current display to the latest memory value.
+Expected Out:	M* multiplies the current display to the latest memory value.
+Actual Out: 	M* multiplies the current display to the latest memory value.
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #8: 	M/ divides the current display to the latest memory value.
+Description: 	M/ divides the current display to the latest memory value.
+Expected Out:	M/ divides the current display to the latest memory value.
+Actual Out: 	M/ divides the current display to the latest memory value.
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #9: 	Clicking a button in the memory display brings it to the calculator display
+Description: 	Clicking a button in the memory display brings it to the calculator display
+Expected Out:	Clicking a button in the memory display brings it to the calculator display
+Actual Out: 	Clicking a button in the memory display brought it to the calculator display
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #10: 	MC button
+Description: 	Clicking MC
+Expected Out:	Clicking MC clears all buttons in the memory display
+Actual Out: 	Clicking MC cleared all buttons in the memory display
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #11: 	Pi button
+Description: 	Clicking Pi
+Expected Out:	Clicking Pi button puts pi into the display
+Actual Out: 	Clicking Pi button put pi into the display
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #12: 	+/- button
+Description: 	Clicking +/- on a positive number
+Expected Out:	Clicking +/- on a positive number changes it to a negative
+Actual Out: 	Clicking +/- on a positive number changed it to a negative
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #12: 	+/- button
+Description: 	Clicking +/- on a negative number
+Expected Out:	Clicking +/- on a negative number changes it to a positive
+Actual Out: 	Clicking +/- on a negative number changed it to a positive
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #12: 	e button
+Description: 	Clicking e puts eulers number on to the display
+Expected Out:	Clicking e puts eulers number on to the display
+Actual Out: 	Clicking e put eulers number on to the display
+
+Author: Sean Michaels
+Date: 7/9/2020
+Test #12: 	Root button
+Description: 	Checking root button
+Expected Out:	Clicking root takes the root of the number
+Actual Out: 	Clicking root took the root of the numbe
